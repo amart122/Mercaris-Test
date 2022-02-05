@@ -1,0 +1,11 @@
+<h1>Add new data to create graph</h1>
+<div class="file-container">
+    <input type="file" id="csv-input" accept='.csv'>
+    <%= button_tag "Load CSV", id: 'submit-cvs' %>
+</div>
+
+<div class="graph-container">
+    <canvas id="graph-canvas"></canvas>
+</div>
+
+<%= javascript_pack_tag 'graphs/new' %>
