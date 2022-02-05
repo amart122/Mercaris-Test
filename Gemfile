@@ -8,6 +8,7 @@ gem 'rails', '~> 6.1.3', '>= 6.1.3.1'
 
 gem 'mysql2'
 gem 'chartkick'
+gem 'groupdate'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
