@@ -1,0 +1,18 @@
+<h1>Add a new DataSet to create a new graph</h1>
+
+<%= form_with model: [DataSet.new], multipart: true do |f| %>
+
+<div class="input-container">
+    <%= f.label :name, 'Date Set Name' %>
+    <%= f.text_field :name %>
+</div>
+
+<div class="file-container">
+    <%= f.label :data_set_file, "CSV file containing Data Set" %>
+    <%= f.file_field :data_set_file, accept: '.csv' %>
+</div>
+
+<div class="submit-container">
+    <%= f.submit "Upload File" %>
+</div>
+<% end %>
