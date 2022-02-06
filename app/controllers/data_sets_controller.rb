@@ -1,10 +1,8 @@
 class DataSetsController < ApplicationController
     def index
-
     end
 
     def new
-        
     end
 
     def create
@@ -15,6 +13,14 @@ class DataSetsController < ApplicationController
         else
             redirect_back(fallback_location: new_data_set_path)
         end
+    end
+
+    def show
+        @dataset = DataSet.find_by(id: params[:id])
+        redirect_to new_data_set_path and return if params[:id].blank? or @dataset.blank?
+        
+        # Group By Month
+        @dataentries = DataEntry.where(data_set_id: @dataset.id).group_by_month(:transaction_date).average(:price)
     end
 
 

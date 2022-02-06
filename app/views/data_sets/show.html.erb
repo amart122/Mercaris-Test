@@ -1,0 +1,8 @@
+<h1>DATA SET: <%= @dataset.name %></h1>
+
+<div class="chart-container">
+    <%= line_chart @dataentries %>
+</div>
+
+
+<%= link_to 'New DataSet', new_data_set_path %>
